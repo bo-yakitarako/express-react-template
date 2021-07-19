@@ -9,9 +9,27 @@ Expressサーバーを起動するよ<br>
 ### `yarn watch`
 フロントのHMRを開始するよ
 
+### `yarn build_client`
+`webpack`でフロントをビルドするよ
+
+### `yarn build_server`
+`tsc`でバックエンドをビルドするよ
+
 ### `yarn build`
-バック、フロントのコードをビルドするよ<br>
-バックエンドは`tsc`で、フロントエンドは`webpack`でビルドするよ
+バック、フロント両方ビルドするよ
 
 ### `yarn production`
 ビルド後のサーバーを開始するよ
+
+### `yarn create_entity [Entityの名前]`
+引数で指定した名前のTypeORMのEntityを作成するよ
+
+### `yarn generate_migration [マイグレーションファイルの名前]`
+マイグレーションを作成するよ
+
+### `yarn migrate_dev`
+開発環境でマイグレーションするよ
+
+###  `yarn migrate`
+本番環境でマイグレーションするよ<br>
+サーバーサイドのビルドをお忘れなく
