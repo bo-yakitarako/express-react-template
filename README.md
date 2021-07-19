@@ -33,3 +33,15 @@ Expressサーバーを起動するよ<br>
 ###  `yarn migrate`
 本番環境でマイグレーションするよ<br>
 サーバーサイドのビルドをお忘れなく
+
+## .envについて
+DB情報を記述する`.env`ファイルがプロジェクト直下に必要だよ。別で用意してね
+
+こんな感じ。値は適宜変えようね
+```env
+ENVIRONMENT="development"
+SERVER_PORT=8080
+PG_USERNAME="db_username"
+PG_PASSWORD="db_password"
+DB_NAME="db_name"
+```
