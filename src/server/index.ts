@@ -1,4 +1,7 @@
 import express from 'express';
+import { config } from 'dotenv';
+
+config();
 
 const app = express();
 
@@ -31,6 +34,7 @@ app.post<any, any, Post>('/api/post/test', (req, res) => {
   res.send(req.body);
 });
 
-app.listen(8080, () => {
-  console.log('8080をlistenします！');
+const PORT = parseInt(process.env.SERVER_PORT || '8080', 10);
+app.listen(PORT, () => {
+  console.log(`http://localhost:${PORT} へ急げ！`);
 });
